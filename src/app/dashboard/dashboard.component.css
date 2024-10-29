@@ -1,0 +1,60 @@
+.sidebar {
+  height: 100vh;
+}
+.user-profile img {
+  width: 50px;
+  height: 50px;
+}
+.card h5 {
+  font-size: 1rem;
+}
+.card h2 {
+  font-size: 2rem;
+}
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+.table-active {
+  background-color: #e9f2ff !important;
+}
+.btn-outline-dark {
+  border-radius: 50px;
+}
+
+@media (max-width: 576px) {
+  .alert-custom {
+      padding: 0.5rem; /* Decrease padding */
+      height: 50px; /* Adjust height */
+  }
+  
+  .icon-circle {
+      width: 20px; /* Smaller icon size */
+      height: 20px; /* Smaller icon size */
+  }
+
+  .alert-custom p {
+      font-size: 0.8rem; /* Smaller font size */
+      margin: 0; /* Remove default margin */
+  }
+  
+  .alert-custom a {
+      font-size: 0.8rem; /* Smaller font size for link */
+  }
+}
+
+@media (max-width: 767.98px) {
+  .vh-100 {
+      height: auto !important;
+  }
+  .alert-light {
+      width: 100% !important;
+  }
+  .card {
+      width: 100% !important;
+  }
+}
+

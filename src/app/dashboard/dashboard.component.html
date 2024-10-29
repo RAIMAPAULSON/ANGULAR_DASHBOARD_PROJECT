@@ -1,0 +1,139 @@
+<div class="container-fluid">
+  <div class="row">
+      <!-- Navbar for mobile view -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light d-md-none">
+          <a class="navbar-brand" href="#">Budget</a>
+          <button class="navbar-toggler" type="button" (click)="toggleNav()" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" [class.show]="navVisible" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link d-flex align-items-center" href="#">
+                          <img src="assets/images/Ellipse 151.png" class="rounded-circle me-2" alt="User Image">
+                          <div>
+                              <span class="fw-semibold">Catherine</span><br>
+                              <small class="text-muted">+61 9876543210</small>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Log Out</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+      <!-- Sidebar for desktop view -->
+      <div class="col-md-2 d-none d-md-flex flex-column vh-100 p-3 bg-light">
+          <!-- Sidebar Title -->
+          <h4 class="fw-bold mb-4">Budget</h4>
+          <!-- Dashboard Link -->
+          <ul class="nav flex-column mb-auto">
+              <li class="nav-item d-flex">
+                  <img src="assets/images/Rectangle 2261.png" alt="">
+                  <a href="#" class="nav-link d-flex align-items-center text-dark">
+                      <img src="assets/images/Dashboard.png" alt="">
+                      <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                  </a>
+              </li>
+          </ul>
+          <!-- User Profile -->
+          <div class="mt-auto d-flex flex-column align-items-center text-center">
+              <div class="d-flex align-items-center bg-light border rounded p-2 w-100">
+                  <img src="assets/images/girl.png" class="rounded-circle me-2" alt="User Image">
+                  <div>
+                      <span class="fw-semibold">Catherine</span><br>
+                      <small class="text-muted">+61 9876543210</small>
+                  </div>
+              </div>
+              <a href="#" class="nav-link mt-3 d-flex align-items-center" style="color: #707070;">
+                  <img src="assets/images/Sign Out.png" class="me-2" alt="">
+                  Log Out
+              </a>
+          </div>
+      </div>
+      <div class="col-md-10">
+          <div class="dashboard-content p-4">
+              <h4>Dashboard</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <div class="alert alert-light alert-custom d-flex align-items-center border rounded-pill w-50" role="alert">
+                  <div class="icon-circle bg-warning text-white rounded-circle d-flex justify-content-center align-items-center me-2">
+                      <img src="assets/images/i.png" alt="" style="width: 20px; height: 20px;"> <!-- Smaller image size -->
+                  </div>
+                  <p><span>You Have <strong>32 Support Request Pending for Response</strong></span></p>
+                  <a href="#" class="ms-auto text-dark fw-bolder">View</a>
+              </div>
+              <div class="row text-center mb-4">
+                  <div class="col-sm-6 col-md-3 mb-3">
+                      <div class="card bg-primary text-white p-3" style="height: 141px; width: 217px;">
+                          <h5>Total Users</h5>
+                          <h2>1,567</h2>
+                          <p>2.36% ↑ Since last month</p>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 mb-3">
+                    <div class="card text-white p-3" style="background-color: #4A9C88; height: 141px; width: 217px;">
+                        <h5>Savings Account</h5>
+                        <h2>1,500</h2>
+                        <p>2.36% ↑ Since last month</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-3">
+                    <div class="card bg-primary text-white p-3" style="height: 141px; width: 217px;">
+                        <h5>Savings Account</h5>
+                        <h2>1,500</h2>
+                        <p>2.36% ↑ Since last month</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-3">
+                    <div class="card text-white p-3" style="background-color: #4A9C88; height: 141px; width: 217px;">
+                        <h5>Savings Account</h5>
+                        <h2>1,500</h2>
+                        <p>2.36% ↑ Since last month</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-4">
+                <h5 class="fw-bold">Recently Active Users</h5>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">User ID/Name</th>
+                                <th scope="col">Phone Number</th>
+                                <th scope="col">Transaction Category</th>
+                                <th scope="col">Transaction Amount</th>
+                                <th scope="col">Account Type</th>
+                                <th scope="col">Balance Amount</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users" [class.table-active]="user.highlighted">
+                                <td>
+                                    <strong>{{ user.name }}</strong><br>
+                                    <small class="text-muted">ID {{ user.id }}</small>
+                                </td>
+                                <td>{{ user.phone }}</td>
+                                <td>
+                                    <div>{{ user.transactionCategory }}</div>
+                                    <small class="text-muted">{{ user.transactionType }}</small>
+                                </td>
+                                <td><strong>${{ user.transactionAmount }}</strong></td>
+                                <td>{{ user.accountType }}</td>
+                                <td><strong>${{ user.balanceAmount }}</strong></td>
+                                <td>
+                                    <a href="#" *ngIf="user.showViewLink" class="text-decoration-none">View</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-3">
+                    <button class="btn btn-outline-dark">View All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
