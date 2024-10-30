@@ -72,12 +72,12 @@ export class DashboardComponent {
     },
   ];
 
-  constructor(private logoutRouter:Router){}
+  constructor(private logoutRouter: Router) { }
   toggleNav() {
     this.navVisible = !this.navVisible;
   }
-  logout(){
+  logout() {
     this.logoutRouter.navigateByUrl('');
   }
 
-  }
+}

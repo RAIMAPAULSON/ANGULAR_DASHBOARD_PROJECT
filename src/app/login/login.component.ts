@@ -11,7 +11,7 @@ export class LoginComponent {
   constructor(private loginRouter:Router){}
 
   login(){
-    // redirect to dashboard
+  
     this.loginRouter.navigateByUrl('dashboard')
   
  }
