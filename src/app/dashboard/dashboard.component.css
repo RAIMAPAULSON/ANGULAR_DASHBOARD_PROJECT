@@ -27,22 +27,22 @@
 
 @media (max-width: 576px) {
   .alert-custom {
-      padding: 0.5rem; /* Decrease padding */
-      height: 50px; /* Adjust height */
+      padding: 0.5rem;
+      height: 50px; 
   }
   
   .icon-circle {
-      width: 20px; /* Smaller icon size */
-      height: 20px; /* Smaller icon size */
+      width: 20px; 
+      height: 20px; 
   }
 
   .alert-custom p {
-      font-size: 0.8rem; /* Smaller font size */
-      margin: 0; /* Remove default margin */
+      font-size: 0.8rem; 
+      margin: 0; 
   }
   
   .alert-custom a {
-      font-size: 0.8rem; /* Smaller font size for link */
+      font-size: 0.8rem; 
   }
 }
 
@@ -57,4 +57,3 @@
       width: 100% !important;
   }
 }
-

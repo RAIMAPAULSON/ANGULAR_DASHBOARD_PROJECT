@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -46,7 +48,7 @@ export class DashboardComponent {
     },
     {
       id: '123456789',
-      name: 'Catherine',
+      name: 'Monica James',
       phone: '+91 9876543210',
       transactionCategory: 'Income',
       transactionType: 'Salary',
@@ -58,7 +60,7 @@ export class DashboardComponent {
     },
     {
       id: '123456789',
-      name: 'Catherine',
+      name: 'Ileana Sam',
       phone: '+91 9876543210',
       transactionCategory: 'Income',
       transactionType: 'Salary',
@@ -70,7 +72,12 @@ export class DashboardComponent {
     },
   ];
 
+  constructor(private logoutRouter:Router){}
   toggleNav() {
     this.navVisible = !this.navVisible;
   }
-}
+  logout(){
+    this.logoutRouter.navigateByUrl('');
+  }
+
+  }

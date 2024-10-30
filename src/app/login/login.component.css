@@ -1,45 +1,14 @@
-/* .container-fluid {
-  height: 100vh;
-  background-color: #f8f9fa;
-}
-
-.col-md-6 {
-  position: relative;
-}
-
-.budget-text {
-  color: #000;
-  top: 44px;
-  left: 60px;
-  z-index: 10;
-  font-size: 34px;
-  font-weight: 600;
-
-}
-
-.img-fluid {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  opacity: 0.9;
-}
-.logprop{
-  font-weight: 400;
-} */
-
-/* Container */
 .container-fluid {
   height: 100vh;
   background-color: #f8f9fa;
-  overflow-x: hidden; /* Remove horizontal scrollbar */
+  overflow-x: hidden; 
 }
 
-/* Column */
+
 .col-md-6 {
   position: relative;
 }
 
-/* Budget Text */
 .budget-text {
   color: #000;
   top: 44px;
@@ -49,7 +18,6 @@
   font-size: 1.5rem;
 }
 
-/* Image */
 .img-fluid {
   width: 100%;
   height: auto;
@@ -57,12 +25,11 @@
   opacity: 0.9;
 }
 
-/* Login Properties */
+
 .logprop {
   font-weight: 400;
 }
 
-/* Form */
 .form-control {
   height: 64px;
   font-size: 16px;
@@ -75,7 +42,6 @@
   opacity: 1;
 }
 
-/* Floating label */
 .form-floating>.form-control, .form-floating>.form-select {
   padding: 1.5rem 0.75rem;
 }
@@ -95,7 +61,7 @@
   color: #6c757d;
 }
 
-/* "Show" Button */
+
 .show-password-btn {
   font-size: 14px;
   color: #6c757d;
@@ -112,13 +78,14 @@
   border-top-right-radius: 0;
 }
 
-/* Responsive Font Sizes */
+
 @media (min-width: 576px) {
   .budget-text {
     font-size: 2rem;
   }
   .login-title {
     font-size: 1.5rem;
+    margin-top: 50px;
   }
   .login-subtitle {
     font-size: 1rem;
@@ -131,6 +98,7 @@
   }
   .login-title {
     font-size: 2rem;
+    margin-top: 50px;
   }
   .login-subtitle {
     font-size: 1.25rem;
@@ -161,7 +129,7 @@
   }
 }
 
-/* Remove left gap and scroll bar on larger screens */
+/*larger screens */
 @media (min-width: 1024px) {
   .container-fluid {
     margin-left: 0;
